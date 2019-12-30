@@ -45,6 +45,9 @@ class Osmosis:
         elif 's3://' in url:
             logger.info('It is an aws url.')
             return 'aws'
+        elif 'wss://' in url:
+            logger.info('It is a streaming url.')
+            return 'streaming'
         else:
             logger.info('It is a on_premise url.')
             return 'on_premise'
