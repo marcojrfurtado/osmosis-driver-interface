@@ -47,6 +47,9 @@ class Osmosis:
         elif 'ipfs://' in url:
             logger.info(f'Loading IPFS driver, url={url}')
             return 'ipfs'
+        elif 'wss://' in url:
+            logger.info('It is a streaming url.')
+            return 'streaming'
         else:
             logger.info(f'Loading on_premise driver, url={url}.')
             return 'on_premise'
