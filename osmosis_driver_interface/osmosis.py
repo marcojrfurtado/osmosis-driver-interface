@@ -38,16 +38,7 @@ class Osmosis:
         :param url: str
         :return: Module name, str
         """
-        if 'core.windows.net' in url:
-            logger.info(f'Loading azure driver, url={url}.')
-            return 'azure'
-        elif 's3://' in url:
-            logger.info(f'Loading aws driver, url={url}.')
-            return 'aws'
-        elif 'ipfs://' in url:
-            logger.info(f'Loading IPFS driver, url={url}')
-            return 'ipfs'
-        elif 'wss://' in url:
+        if 'wss://' in url:
             logger.info('It is a streaming url.')
             return 'streaming'
         else:
