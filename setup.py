@@ -43,7 +43,7 @@ dev_requirements = [
 ]
 
 setup(
-    author="leucothia",
+    author="marcojrfurtado",
     author_email='devops@oceanprotocol.com',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -54,7 +54,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     description="💧 Osmosis driver interface. A membrane between the decentralized world and "
-                "centralized world.",
+                "centralized world. Extended with support for custom drivers.",
     extras_require={
         'test': test_requirements,
         'dev': dev_requirements + test_requirements,
@@ -64,13 +64,13 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     include_package_data=True,
-    keywords='osmosis-driver-interface',
-    name='osmosis-driver-interface',
+    keywords='osmosis-driver-interface-plus',
+    name='osmosis-driver-interface-plus',
     packages=find_packages(include=['osmosis_driver_interface']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/oceanprotocol/osmosis-driver-interface',
+    url='https://github.com/marcojrfurtado/osmosis-driver-interface-plus',
     version='0.0.7',
     zip_safe=False,
 )
